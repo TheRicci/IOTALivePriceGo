@@ -76,7 +76,7 @@ func main() {
 		}
 	}, false)
 
-	tools.NewTask(1*time.Second, 5*time.Second).Start(func() {
+	tools.NewTask(1*time.Second, 60*time.Second).Start(func() {
 
 		resp, err := http.Get("https://api.coingecko.com/api/v3/simple/price?ids=iota&vs_currencies=usd&include_24hr_vol=true&include_24hr_change=true")
 
@@ -179,7 +179,7 @@ func main() {
 
 	}, false)
 
-	tools.NewTask(1*time.Second, 6*time.Second).Start(func() {
+	tools.NewTask(1*time.Second, 10*time.Second).Start(func() {
 
 		resp, err := http.Get("https://api.binance.com/api/v1/ticker/price?symbol=IOTAUSDT")
 
